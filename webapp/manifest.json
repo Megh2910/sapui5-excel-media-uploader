@@ -1,0 +1,66 @@
+{
+  "_version": "1.82.0",
+
+  "sap.app": {
+    "id": "excelproject",
+    "type": "application",
+    "title": "Excel Upload Example",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+
+    "dependencies": {
+      "minUI5Version": "1.120.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.unified": {}
+      }
+    },
+
+    "rootView": {
+      "viewName": "excelproject.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "viewType": "XML",
+        "viewPath": "excelproject.view",
+        "async": true
+      },
+
+      "routes": [
+        {
+          "name": "main",
+          "pattern": "",
+          "target": "MView"
+        }
+      ],
+
+      "targets": {
+        "MView": {
+          "viewName": "MView"
+        }
+      }
+    }
+
+  }
+}
